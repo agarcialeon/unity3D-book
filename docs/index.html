@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Unity3D Book</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css">
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css" />
+  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css" />
+  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/regular.min.css" />
+  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css" />
+  <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    var num = 0;
+
+    window.$docsify = {
+      name: 'Unity3D Community Book',
+      repo: 'https://github.com/agarcialeon/unity3D-book',
+      themeColor: '#00CCAB',
+      autoHeader: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+      onlyCover: true,
+      notFoundPage: true,
+      logo: '',
+      formatUpdated: '{DD}/{MM}/{YYYY} {HH}:{mm}',
+      formatUpdated: function (time) {
+        return time;
+      },
+      themeable: {
+        readyTransition: true,
+        responsiveTables: true
+      },
+      tabs: {
+        persist: true, // default
+        sync: true, // default
+        theme: 'classic', // default
+        tabComments: true, // default
+        tabHeadings: true // default
+      },
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2', //'h3, h4, h5, h6'
+        title: 'Table of Contents',
+      },
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: [],
+        placeholder: 'Write here to search',
+        noData: 'No results found.',
+        depth: 2, // Headline depth, 1 - 6
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+      },
+      footer: {
+        copy: '<span>MIT License.</span>',
+        pre: '<hr/>',
+        style: 'text-align: center;'
+      },
+      markdown: {
+        renderer: {
+          code: function (code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
+      //changelog : 'CHANGELOG.md'
+    }
+  </script>
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+  <script type="text/javascript" src="//unpkg.com/prismjs/components/prism-csharp.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
+
+  <!-- PLUGINS -->
+  <script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-copy-code"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-glossary/dist/docsify-glossary.min.js"></script>
+  <script type="text/javascript" src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+
+  <script>
+
+    mermaid.initialize({
+      startOnLoad: false
+    });
+
+    // TODO: Go to top button
+    // TODO: Dark mode with https://github.com/ColinEspinas/darken
+
+  </script>
+
+</body>
+
+</html>
