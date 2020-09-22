@@ -1,5 +1,5 @@
 * [Home](README.md)
-* [A little of history](/history.md)
+* [A little of history](/intro/a-little-of-history.md)
 * [The Basics](/basics/intro.md)
     * [What is Unity3D?](/basics/what-is-unity.md)
     * [Setup](/basics/setup.md)
