@@ -32,6 +32,10 @@ Generalmente podremos encontrar esta ventana junto a la vista de proyecto (Proje
 
 ## Vista de juego (Game)
 
+La vista de juego nos muestra la vista de la cámara que por defecto Unity incluye en la escena por defecto de nuestra aplicación.
+En función del tipo de cámara que estemos usando en nuestras escenas, se mostrará la interfaz de usuario, el mundo 3D de nuestra escena o una mezcla de ambos.
+Esta vista no se moverá salvo que movamos nuestra cámara, así que no nos servirá para movernos por nuestras escenas a la hora de colocar los elementos que aparezcan en estas. Para poder ver mejor nuestras escenas tenemos otra ventana específica para ello, la vista de escena (Scene), que veremos a continuación.
+
 ## Vista de escena (Scene)
 
 ## Vista de proyecto (Project)
