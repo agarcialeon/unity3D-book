@@ -36,6 +36,26 @@ Generalmente podremos encontrar esta ventana junto a la vista de proyecto (Proje
 
 ## Vista de proyecto (Project)
 
+En esta ventana encontraremos todos los ficheros o archivos que componen nuestro proyecto.
+Todo proyecto de Unity contiene una carpeta padre llamada Assets dentro de la cual podremos añadir el resto de carpetas y archivos que necesitemos.
+Dentro de esta carpeta, somos libres de organizar nuestros archivos como queramos pero se recomienda seguir una estructura de carpetas concreta para una mejor gestión de nuestros proyectos. Aparte, determinados nombres de carpetas son identificados por el editor de Unity y tienen un funcionamiento concreto a la hora de programar nuestras aplicaciones. No te preocupes esto lo veremos más adelante en detalle.
+
+La estructura es la siguiente:
+
+* Assets
+  * Animations
+  * Scripts
+  * Resources
+  * Scenes
+  * Textures
+  * Materials
+  * Shaders
+  * Plugins
+  * Models
+  * StreamingAssets
+  * Editor
+
+
 ## Jerarquía (Hierarchy)
 
 ## Inspector
